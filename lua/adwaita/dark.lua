@@ -1,12 +1,15 @@
 local u = require 'adwaita.utils'
-local colors = u.gen_colors()
-local nvim_set_hl = function(ns_id)
-    return function(name, val)
-        vim.api.nvim_set_hl(ns_id, name, val)
-    end
+local link_other_highlights = require 'adwaita.utils'.link_other_highlights
+
+local hl = function(grp, options)
+    local fg = options.fg ~= nil and options.fg or 'none'
+    local bg = options.bg ~= nil and options.bg or 'none'
+    local attr = options.attr ~= nil and options.attr or 'none'
+    local sp = options.sp ~= nil and options.sp or 'none'
+    vim.api.nvim_command('highlight ' .. grp .. ' guifg=' .. options.fg .. ' guibg=' .. options.bg .. ' gui=' .. options.attr .. ' guisp=' .. options.sp)
 end
 
-local hl = nvim_set_hl(0)
+local colors = u.gen_colors()
 
 local M = {}
 
@@ -264,6 +267,7 @@ M.set = function()
 
     hl('GitSignsAddLn', { fg = colors.green_2, bg = colors.green_6 })
     hl('GitSignsChangeLn', { fg = colors.orange_1, bg = colors.orange_5 })
+    link_other_highlights()
 end
 
 
