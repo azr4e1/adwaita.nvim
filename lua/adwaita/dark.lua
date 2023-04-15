@@ -6,7 +6,7 @@ local hl = function(grp, options)
     local bg = options.bg ~= nil and options.bg or 'none'
     local bold = options.attr ~= nil and 'bold' or 'none'
     local sp = options.sp ~= nil and options.sp or 'none'
-    vim.api.nvim_command('highlight ' .. grp .. ' guifg=' .. fg .. ' guibg=' .. bg .. ' gui=' .. attr .. ' guisp=' .. sp)
+    vim.api.nvim_command('highlight ' .. grp .. ' guifg=' .. fg .. ' guibg=' .. bg .. ' gui=' .. bold .. ' guisp=' .. sp)
 end
 
 local colors = u.gen_colors()
