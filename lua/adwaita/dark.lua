@@ -4,7 +4,7 @@ local link_other_highlights = require 'adwaita.utils'.link_other_highlights
 local hl = function(grp, options)
     local fg = options.fg ~= nil and options.fg or 'none'
     local bg = options.bg ~= nil and options.bg or 'none'
-    local bold = options.attr ~= nil and 'bold' or 'none'
+    local bold = options.bold ~= nil and 'bold' or 'none'
     local sp = options.sp ~= nil and options.sp or 'none'
     vim.api.nvim_command('highlight ' .. grp .. ' guifg=' .. fg .. ' guibg=' .. bg .. ' gui=' .. bold .. ' guisp=' .. sp)
 end
@@ -160,7 +160,7 @@ M.set = function()
     hl('@character', { fg = colors.teal_3 })
     hl('@character.special', { fg = colors.blue_2 })
     hl('@number', { fg = colors.teal_2 })
-    hl('@boolan', { fg = colors.violet_2, bold = true })
+    hl('@boolean', { fg = colors.violet_2, bold = true })
     hl('@float', { fg = colors.teal_3 })
     hl('@function', { fg = colors.blue_2 })
     hl('@function.builtin', { fg = colors.blue_2 })
