@@ -4,7 +4,7 @@ local link_other_highlights = require 'adwaita.utils'.link_other_highlights
 local hl = function(grp, options)
     local fg = options.fg ~= nil and options.fg or 'none'
     local bg = options.bg ~= nil and options.bg or 'none'
-    local attr = options.attr ~= nil and options.attr or 'none'
+    local bold = options.attr ~= nil and 'bold' or 'none'
     local sp = options.sp ~= nil and options.sp or 'none'
     vim.api.nvim_command('highlight ' .. grp .. ' guifg=' .. fg .. ' guibg=' .. bg .. ' gui=' .. attr .. ' guisp=' .. sp)
 end
