@@ -1,10 +1,42 @@
 local u = require 'adwaita.utils'
 local link_other_highlights = require 'adwaita.utils'.link_other_highlights
 
+local attr_finder = function(options)
+    if options.bold ~= nil then
+        return 'bold'
+    elseif options.underline ~= nil then
+        return 'underline'
+    elseif options.undercurl ~= nil then
+        return 'undercurl'
+    elseif options.underdouble ~= nil then
+        return 'underdouble'
+    elseif options.underdotted ~= nil then
+        return 'underdotted'
+    elseif options.underdashed ~= nil then
+        return 'underdashed'
+    elseif options.strikethrough ~= nil then
+        return 'strikethrough'
+    elseif options.reverse ~= nil then
+        return 'reverse'
+    elseif options.inverse ~= nil then
+        return 'inverse'
+    elseif options.italic ~= nil then
+        return 'italic'
+    elseif options.standout ~= nil then
+        return 'standout'
+    elseif options.altfont ~= nil then
+        return 'altfont'
+    elseif options.nocombine ~= nil then
+        return 'nocombine'
+    else
+        return 'none'
+    end
+end
+
 local hl = function(grp, options)
     local fg = options.fg ~= nil and options.fg or 'none'
     local bg = options.bg ~= nil and options.bg or 'none'
-    local bold = options.bold ~= nil and 'bold' or 'none'
+    local attr = attr_finder(options)
     local sp = options.sp ~= nil and options.sp or 'none'
     vim.api.nvim_command('highlight ' .. grp .. ' guifg=' .. fg .. ' guibg=' .. bg .. ' gui=' .. bold .. ' guisp=' .. sp)
 end
@@ -117,7 +149,7 @@ M.set = function()
     hl('Delimiter', { fg = colors.teal_2 })
     hl('SpecialComment', { fg = colors.dark_2, bold = true })
     hl('Debug', { fg = colors.yellow_2 })
-    hl('Underlined', { fg = colors.blue_5, underline = true })
+    hl('Underlined', { underline = true })
     hl('Ignore', { fg = colors.light_4 })
     hl('Error', { fg = colors.red_3, underline = true })
     hl('SpellBad', { fg = colors.red_3, underline = true, sp = colors.red_3 })
