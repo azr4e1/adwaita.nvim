@@ -71,8 +71,8 @@ M.set = function()
 
     -- UI highlight
     hl('Normal', { fg = colors.light_4, bg = colors.libadwaita_dark })
-    hl('NormalFloat', { fg = colors.light_4, bg = colors.libadwaita_dark })
-    hl('FloatBorder', { fg = colors.split_and_borders, bg = colors.libadwaita_dark })
+    hl('NormalFloat', { fg = colors.light_4, bg = colors.libadwaita_popup })
+    hl('FloatBorder', { fg = colors.split_and_borders, bg = colors.libadwaita_popup })
     hl('ColorColumn', { bg = colors.libadwaita_dark_alt })
     hl('Cursor', { fg = colors.libadwaita_dark, bg = colors.light_5 })
     hl('CursorLine', { bg = colors.libadwaita_dark_alt })
