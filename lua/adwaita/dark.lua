@@ -265,7 +265,7 @@ M.set = function()
     hl('NvimTreeFolderName', { fg = colors.light_4, bold = true })
     hl('NvimTreeEmptyFolderName', { fg = colors.light_4, bold = true })
     hl('NvimTreeOpenedFolderName', { fg = colors.light_4, bold = true })
-    hl('NvimTreeVertSplit', { fg = colors.libadwaita_tree, bg = colors.libadwaita_tree })
+    hl('NvimTreeWinSeparator', { fg = colors.libadwaita_dark, bg = colors.libadwaita_dark })
     hl('NvimTreeNormal', { bg = colors.libadwaita_tree })
     hl('NvimTreeEndOfBuffer', { fg = colors.libadwaita_tree, bg = colors.libadwaita_tree })
 
