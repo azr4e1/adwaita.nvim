@@ -274,14 +274,13 @@ M.set = function()
 
 
     -- Telescope nvim
-    hl('TelescopePromptBorder', { fg = colors.split_and_borders })
-    hl('TelescopeResultsBorder', { fg = colors.split_and_borders })
-    hl('TelescopePreviewBorder', { fg = colors.split_and_borders })
-    hl('TelescopeNormal', { fg = colors.light_4 })
-    hl('TelescopeSelection', { fg = colors.light_4, bg = colors.blue_5 })
-    hl('TelescopeMultiSelection', { fg = colors.light_4, bg = colors.blue_5 })
-    hl('TelescopeMatching', { fg = colors.light_4, bold = true })
-    hl('TelescopePromptPrefix', { fg = colors.light_4, bold = true })
+    hl('TelescopeNormal', { fg = colors.light_4, bg = colors.libadwaita_popup })
+    hl('TelescopeBorder', { fg = colors.light_4, bg = colors.libadwaita_popup })
+    hl('TelescopePromptNormal', { bg = colors.dark_4 })
+    hl('TelescopePromptBorder', { fg = colors.dark4, bg = colors.dark4 })
+    hl('TelescopePromptTitle', { fg = colors.dark4, bg = colors.dark4 })
+    hl('TelescopePreviewTitle', { fg = colors.light_4, bg = colors.libadwaita_popup })
+    hl('TelescopeResultsTitle', { fg = colors.light_4, bg = colors.libadwaita_popup })
 
     hl('LspReferenceText', { bg = colors.blue_7 })
     hl('LspReferenceRead', { bg = colors.blue_7 })
