@@ -276,7 +276,7 @@ M.set = function()
     -- Telescope nvim
     hl('TelescopeNormal', { fg = colors.light_4, bg = colors.libadwaita_popup })
     hl('TelescopeBorder', { fg = colors.libadwaita_popup, bg = colors.libadwaita_popup })
-    hl('TelescopePromptNormal', { bg = colors.dark_4 })
+    hl('TelescopePromptNormal', { fg = colors.dark4, bg = colors.dark_4 })
     hl('TelescopePromptBorder', { fg = colors.dark4, bg = colors.dark4 })
     hl('TelescopePromptTitle', { fg = colors.dark4, bg = colors.dark4 })
     hl('TelescopePreviewTitle', { fg = colors.libadwaita_popup, bg = colors.libadwaita_popup })
